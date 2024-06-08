@@ -11,7 +11,7 @@ async function getTransfers(){
             fromUserId:Number(session.user?.id)
         }
     });
-    return transfers.map(t=>({
+    return transfers.map((t:any)=>({
         timestamp:t.timestamp,
         amount:t.amount,
         fromUserId:t.fromUserId,
